@@ -4,10 +4,10 @@ import React from "react";
 const Services = () => {
   return (
     <div className=" rounded-full flex justify-center items-center bg-color-slideshow-background @@@@ media-350:mx-8 media-996:mx-20 media-1096:mx-24 media-1276:mx-32">
-      <div className=" wrapper text-color-golden-rod/70 font-extrabold text-sizeCarousel font-jersey tracking-[.2em] group">
+      <div className=" wrapper text-color-golden-rod/70 font-extrabold text-sizeCarousel font-jersey tracking-[.2em]">
         <div className="item item1 flex items-center justify-center">
           <Image
-            className="w-20 h-20 media-676:w-24 media-676:h-24 group-hover:animate-[bounce_2s_ease-in-out_infinite]"
+            className="w-20 h-20 media-676:w-24 media-676:h-24 animate-[bounce_2s_ease-in-out_infinite]"
             src={"/images/silver.png"}
             width={100}
             height={100}
@@ -19,7 +19,7 @@ const Services = () => {
         </div>
         <div className="item item3 flex items-center justify-center">
           <Image
-            className="w-20 h-20 media-676:w-24 media-676:h-24 group-hover:animate-[bounce_3s_ease-in-out_infinite]"
+            className="w-20 h-20 media-676:w-24 media-676:h-24 animate-[bounce_3s_ease-in-out_infinite]"
             src={"/images/gold.png"}
             width={100}
             height={100}
@@ -31,7 +31,7 @@ const Services = () => {
         </div>
         <div className="item item5 flex items-center justify-center">
           <Image
-            className="w-20 h-20 media-676:w-24 media-676:h-24 group-hover:animate-[bounce_2s_ease-in-out_infinite]"
+            className="w-20 h-20 media-676:w-24 media-676:h-24 animate-[bounce_2s_ease-in-out_infinite]"
             src={"/images/silver.png"}
             width={100}
             height={100}
@@ -43,7 +43,7 @@ const Services = () => {
         </div>
         <div className="item item7 flex items-center justify-center">
           <Image
-            className="w-20 h-20 media-676:w-24 media-676:h-24 group-hover:animate-[bounce_4s_ease-in-out_infinite]"
+            className="w-20 h-20 media-676:w-24 media-676:h-24 animate-[bounce_4s_ease-in-out_infinite]"
             src={"/images/gold.png"}
             width={100}
             height={100}
