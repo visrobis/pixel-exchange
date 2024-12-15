@@ -17,16 +17,16 @@ const HeroSection = () => {
                 priority
               />
             </div>
-            <div className=" space-y-5 text-color-100 @@@@ media-776:space-y-4">
+            <div className="flex justify-center flex-col items-center text-color-100 @@@@  @@@@ media-676:space-y-5">
               <div className="flex justify-center w-64 p-3 @@@@ media-776:w-auto media-676:px-0">
-                <pre className="flex">
-                  <h1 className="text-sizeHero leading-[4rem] font-extrabold font-pixel tracking-[.2em] w-fit ">
+                <div className="flex justify-center items-center gap-2 flex-col ">
+                  <h1 className="text-sizeHero  font-extrabold font-pixel tracking-[.2em] w-fit ">
                     Pixel
                   </h1>
-                  <h1 className="text-sizeHero leading-[4rem] font-extrabold font-pixel tracking-[.2em]  w-fit underline underline-offset-8 shadow-bottom-dark">
+                  <h1 className="text-sizeHero  font-extrabold font-pixel tracking-[.2em]  w-fit underline  @@@@ media-676:shadow-bottom-light media-676:underline-offset-8">
                     Exhange
                   </h1>
-                </pre>
+                </div>
               </div>
 
               <div className=" bg-color-400/50 text-color-golden-rod p-3 rounded-2xl text-sizeSubtitle w-fit shadow-bottom-dark">

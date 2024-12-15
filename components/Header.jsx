@@ -6,7 +6,7 @@ import Contacts from "./Contacts";
 const Header = () => {
   return (
     <div className=" z-50 flex justify-center items-center h-16 w-screen fixed">
-      <nav className="  shadow-bottom-light flex justify-around items-center mt-10 fixed w-8/12 h-16 rounded-3xl bg-color-nav text-color-100">
+      <nav className=" px-1 shadow-bottom-light flex justify-around items-center mt-10 fixed w-8/12 h-16 rounded-3xl bg-color-nav text-color-100">
         <div className="flex justify-center items-center gap-1">
           <Image
             className=" rounded-xl"
@@ -19,7 +19,7 @@ const Header = () => {
         </div>
         <div className="relative">
           <Link href={"https://www.facebook.com/groups/954073679578964"}>
-            Transaction
+            Proof
           </Link>
           <Contacts />
         </div>

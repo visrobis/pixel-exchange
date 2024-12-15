@@ -25,7 +25,7 @@ const SupportedGames = () => {
           <div className="flex justify-center items-center flex-wrap w-full">
             <Link href={"https://www.facebook.com/groups/954073679578964"}>
               {/* Ran Card */}
-              <div className="relative group w-64 h-64 flex justify-center items-center bg-[url('/images/ran.png')] bg-cover bg-no-repeat">
+              <div className="relative group w-40 h-40 flex justify-center items-center bg-[url('/images/ran.png')] bg-cover bg-no-repeat @@@@ media-676:w-64 media-676:h-64">
                 {/* Tooltip */}
                 <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 bg-gray-800 text-white text-sm px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity">
                   Ran Online Pinas
@@ -36,7 +36,7 @@ const SupportedGames = () => {
             <Link href={"https://www.facebook.com/groups/954073679578964"}>
               {" "}
               {/* Albion Card */}
-              <div className="relative group w-64 h-64 flex justify-center items-center bg-[url('/images/albion.png')] bg-cover bg-no-repeat">
+              <div className="relative group w-40 h-40 flex justify-center items-center bg-[url('/images/albion.png')] bg-cover bg-no-repeat @@@@ media-676:w-64 media-676:h-64">
                 {/* Tooltip */}
                 <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 bg-gray-800 text-white text-sm px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity">
                   Albion Online Buy & Sell
