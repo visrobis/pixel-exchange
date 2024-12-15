@@ -42,6 +42,10 @@ export default {
         "color-slideshow-background": "#B98E8E", // Slideshow background
         "color-nav": "#242424", // Navbar and footer color
         "color-1000": "#473A14", // Background color
+        "color-2000": "#471446",
+        "color-3000": "#144047",
+        "color-4000": "#224714",
+        "color-5000": "#D419E5",
       },
       borderRadius: {},
       boxShadow: {

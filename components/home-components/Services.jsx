@@ -7,7 +7,7 @@ const Services = () => {
       <div className=" wrapper flex justify-center items-center text-color-golden-rod/70 font-extrabold text-sizeCarousel font-jersey tracking-[.2em] text-center">
         <div className="item item1 flex items-center justify-center">
           <Image
-            className="w-20 h-20 media-676:w-24 media-676:h-24 animate-[bounce_2s_ease-in-out_infinite]"
+            className="w-20 h-20 media-676:w-24 media-676:h-24 animate-[bounce_2.2s_ease-in-out_infinite]"
             src={"/images/silver.png"}
             width={100}
             height={100}
@@ -20,7 +20,7 @@ const Services = () => {
         </div>
         <div className="item item3 flex items-center justify-center">
           <Image
-            className="w-20 h-20 media-676:w-24 media-676:h-24 animate-[bounce_2s_ease-in-out_infinite]"
+            className="w-20 h-20 media-676:w-24 media-676:h-24 animate-[bounce_2.7s_ease-in-out_infinite]"
             src={"/images/gold.png"}
             width={100}
             height={100}
@@ -32,7 +32,7 @@ const Services = () => {
         </div>
         <div className="item item5 flex items-center justify-center">
           <Image
-            className="w-20 h-20 media-676:w-24 media-676:h-24 animate-[bounce_2s_ease-in-out_infinite]"
+            className="w-20 h-20 media-676:w-24 media-676:h-24 animate-[bounce_3s_ease-in-out_infinite]"
             src={"/images/silver.png"}
             width={100}
             height={100}
@@ -44,7 +44,7 @@ const Services = () => {
         </div>
         <div className="item item7 flex items-center justify-center">
           <Image
-            className="w-20 h-20 media-676:w-24 media-676:h-24 animate-[bounce_4s_ease-in-out_infinite]"
+            className="w-20 h-20 media-676:w-24 media-676:h-24 animate-[bounce_2.5s_ease-in-out_infinite]"
             src={"/images/gold.png"}
             width={100}
             height={100}
