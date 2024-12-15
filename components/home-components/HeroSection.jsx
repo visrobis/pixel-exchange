@@ -23,13 +23,13 @@ const HeroSection = () => {
                   <h1 className="text-sizeHero  font-extrabold font-pixel tracking-[.2em] w-fit ">
                     Pixel
                   </h1>
-                  <h1 className="text-sizeHero  font-extrabold font-pixel tracking-[.2em]  w-fit underline  @@@@ media-676:shadow-bottom-light media-676:underline-offset-8">
+                  <h1 className="text-sizeHero  font-extrabold font-pixel tracking-[.2em]  w-fit underline  @@@@ media-676:shadow-bottom-dark media-676:underline-offset-8">
                     Exhange
                   </h1>
                 </div>
               </div>
 
-              <div className=" bg-color-400/50 text-color-golden-rod p-3 rounded-2xl text-sizeSubtitle w-fit shadow-bottom-dark">
+              <div className=" text-center bg-color-400/50 text-color-golden-rod p-3 rounded-2xl text-sizeSubtitle w-fit shadow-bottom-dark">
                 <h2>Fuel Your Game, Trade with Trust</h2>
                 <h2>Silver Deals Made Simple!</h2>
               </div>
