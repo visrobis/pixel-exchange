@@ -5,8 +5,14 @@ import { About } from "./About";
 import { ContextApi } from "@/context/contextapi";
 
 const SupportedGames = () => {
-  const { handlePlayAlbionAudioPauseClick, handlePlayRanAudioPauseClick } =
-    useContext(ContextApi);
+  const {
+    handlePlayAlbionAudioPauseClick,
+    handlePlayRanAudioPauseClick,
+    handlePlayHarvestMoonAudioPauseClick,
+    isAlbionAudioPlaying,
+    isRanAudioPlaying,
+    isHarvestMoonAudioPlaying,
+  } = useContext(ContextApi);
 
   return (
     <div
@@ -51,6 +57,19 @@ const SupportedGames = () => {
           </div>
           <About />
         </div>
+      </div>
+      <div className=" hidden">
+        <button onClick={handlePlayHarvestMoonAudioPauseClick}>
+          {isHarvestMoonAudioPlaying
+            ? "Pause Harvest Moon"
+            : "Play Harvest Moon"}
+        </button>
+        <button onClick={handlePlayRanAudioPauseClick}>
+          {isRanAudioPlaying ? "Pause Ran" : "Play Ran"}
+        </button>
+        <button onClick={handlePlayAlbionAudioPauseClick}>
+          {isAlbionAudioPlaying ? "Pause Albion" : "Play Albion"}
+        </button>
       </div>
     </div>
   );

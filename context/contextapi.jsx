@@ -84,6 +84,9 @@ export const ContextApiProvider = ({ children }) => {
         harvestMoonAudio,
         handlePlayAlbionAudioPauseClick,
         handlePlayRanAudioPauseClick,
+        isAlbionAudioPlaying,
+        isRanAudioPlaying,
+        isHarvestMoonAudioPlaying,
       }}
     >
       {children}

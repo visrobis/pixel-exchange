@@ -6,8 +6,16 @@ import Contacts from "./Contacts";
 import { ContextApi } from "@/context/contextapi";
 
 const Header = () => {
-  const { handlePlayHarvestMoonAudioPauseClick, harvestMoonAudio } =
-    useContext(ContextApi);
+  const {
+    handlePlayHarvestMoonAudioPauseClick,
+    harvestMoonAudio,
+    handlePlayAlbionAudioPauseClick,
+    handlePlayRanAudioPauseClick,
+
+    isAlbionAudioPlaying,
+    isRanAudioPlaying,
+    isHarvestMoonAudioPlaying,
+  } = useContext(ContextApi);
 
   return (
     <div className="z-50 flex justify-center items-center h-16 w-screen fixed">
@@ -36,6 +44,19 @@ const Header = () => {
           <Contacts />
         </div>
       </nav>
+      <div className=" hidden">
+        <button onClick={handlePlayHarvestMoonAudioPauseClick}>
+          {isHarvestMoonAudioPlaying
+            ? "Pause Harvest Moon"
+            : "Play Harvest Moon"}
+        </button>
+        <button onClick={handlePlayRanAudioPauseClick}>
+          {isRanAudioPlaying ? "Pause Ran" : "Play Ran"}
+        </button>
+        <button onClick={handlePlayAlbionAudioPauseClick}>
+          {isAlbionAudioPlaying ? "Pause Albion" : "Play Albion"}
+        </button>
+      </div>
     </div>
   );
 };
