@@ -7,7 +7,7 @@ const Footer = () => {
     <div className="flex justify-center items-center p-5">
       <div className=" flex flex-col justify-center items-center gap-3 h-36">
         <div>
-          <h4 className=" font-general text-sizeSubtitle underline-offset-8 underline font-extrabold">
+          <h4 className=" font-general text-sizeFooter underline-offset-8 underline font-extrabold">
             Explore Pixel Exchange
           </h4>
         </div>

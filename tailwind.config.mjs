@@ -64,7 +64,7 @@ export default {
         sizeParagraphBase: ".95rem",
         sizeParagraphSm: "0.75rem",
         sizeLogo: "calc(.45rem + 2vw)",
-        sizeFooter: "calc(.45rem + 2vw)",
+        sizeFooter: "calc(.75rem + 1.2vw)",
         sizeBig: "calc(2.5rem + 4vw)",
       },
       height: {
