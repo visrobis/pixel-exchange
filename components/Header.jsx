@@ -6,16 +6,8 @@ import Contacts from "./Contacts";
 import { ContextApi } from "@/context/contextapi";
 
 const Header = () => {
-  const {
-    handlePlayHarvestMoonAudioPauseClick,
-    harvestMoonAudio,
-    handlePlayAlbionAudioPauseClick,
-    handlePlayRanAudioPauseClick,
-
-    isAlbionAudioPlaying,
-    isRanAudioPlaying,
-    isHarvestMoonAudioPlaying,
-  } = useContext(ContextApi);
+  const { handlePlayHarvestMoonAudioPauseClick, isHarvestMoonAudioPlaying } =
+    useContext(ContextApi);
 
   return (
     <div className="z-50 flex justify-center items-center h-16 w-screen fixed">
@@ -28,10 +20,10 @@ const Header = () => {
               src={"/images/alien.gif"}
               width={50}
               height={50}
-              alt={harvestMoonAudio ? "Pause Music" : "Play Music"}
+              alt={isHarvestMoonAudioPlaying ? "Pause Music" : "Play Music"}
             />
             <span className="absolute top-full left-1/2 transform -translate-x-1/2 mt-2 hidden group-hover:block bg-gray-700 text-white text-sm px-2 py-1 rounded">
-              {harvestMoonAudio ? "Pause Music" : "Play Music"}
+              {isHarvestMoonAudioPlaying ? "Pause Music" : "Play Music"}
             </span>
           </div>
           <Image src={"/images/logo.png"} width={100} height={100} alt="" />
@@ -44,19 +36,6 @@ const Header = () => {
           <Contacts />
         </div>
       </nav>
-      <div className=" hidden">
-        <button onClick={handlePlayHarvestMoonAudioPauseClick}>
-          {isHarvestMoonAudioPlaying
-            ? "Pause Harvest Moon"
-            : "Play Harvest Moon"}
-        </button>
-        <button onClick={handlePlayRanAudioPauseClick}>
-          {isRanAudioPlaying ? "Pause Ran" : "Play Ran"}
-        </button>
-        <button onClick={handlePlayAlbionAudioPauseClick}>
-          {isAlbionAudioPlaying ? "Pause Albion" : "Play Albion"}
-        </button>
-      </div>
     </div>
   );
 };

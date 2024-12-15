@@ -16,8 +16,8 @@ export const ContextApiProvider = ({ children }) => {
 
   useEffect(() => {
     // Ensure this only runs in the browser
+    const harvestMoonInstance = new Audio("/music/harvestmoon.mp3");
     if (typeof window !== "undefined") {
-      const harvestMoonInstance = new Audio("/music/harvestmoon.mp3");
       harvestMoonInstance.volume = 0.2;
       harvestMoonInstance.loop = true;
       setHarvestMoonAudio(harvestMoonInstance);
@@ -32,6 +32,14 @@ export const ContextApiProvider = ({ children }) => {
       albionInstance.loop = true;
       setAlbionAudio(albionInstance);
     }
+    return () => {
+      harvestMoonInstance.pause();
+      ranInstance.pause();
+      albionInstance.pause();
+      setHarvestMoonAudio(null); // Reset the audio state when component unmounts
+      setRanAudio(null);
+      setAlbionAudio(null);
+    };
   }, []);
 
   const handlePlayHarvestMoonAudioPauseClick = () => {
