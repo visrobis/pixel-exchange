@@ -3,6 +3,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { ContextApiProvider } from "@/context/contextapi";
 
 export const metadata = {
   title: "Pixel Exchange",
@@ -40,9 +41,11 @@ export default function RootLayout({ children }) {
       <body
         className={`${karmaticArcade.variable} ${jersey.variable} ${inter.className} antialiased`}
       >
-        <Header />
-        {children}
-        <Footer />
+        <ContextApiProvider>
+          <Header />
+          {children}
+          <Footer />
+        </ContextApiProvider>
       </body>
     </html>
   );

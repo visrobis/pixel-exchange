@@ -27,6 +27,9 @@ export default function Home() {
     return () => clearInterval(interval); // Cleanup on unmount
   }, []);
 
+  const [audio] = useState(() => new Audio("/music/file.mp3"));
+  const [isPlaying, setIsPlaying] = useState(false);
+
   return (
     <div
       className={`bg-gradient-to-r ${bgColor} transition-all duration-1000 ease-in-out min-h-screen`}
