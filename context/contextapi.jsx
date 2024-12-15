@@ -15,12 +15,22 @@ export const ContextApiProvider = ({ children }) => {
   const [isAlbionAudioPlaying, setIsAlbionAudioPlaying] = useState(false);
 
   useEffect(() => {
-    // Only run this in the browser
+    // Ensure this only runs in the browser
     if (typeof window !== "undefined") {
-      const audioInstance = new Audio("/music/harvestmoon.mp3");
-      audioInstance.volume = 0.2; // Set volume
-      audioInstance.loop = true; // Enable looping
-      setHarvestMoonAudio(audioInstance);
+      const harvestMoonInstance = new Audio("/music/harvestmoon.mp3");
+      harvestMoonInstance.volume = 0.2;
+      harvestMoonInstance.loop = true;
+      setHarvestMoonAudio(harvestMoonInstance);
+
+      const ranInstance = new Audio("/music/ran.mp3");
+      ranInstance.volume = 0.2;
+      ranInstance.loop = true;
+      setRanAudio(ranInstance);
+
+      const albionInstance = new Audio("/music/albion.mp3");
+      albionInstance.volume = 0.2;
+      albionInstance.loop = true;
+      setAlbionAudio(albionInstance);
     }
   }, []);
 
@@ -30,25 +40,15 @@ export const ContextApiProvider = ({ children }) => {
         harvestMoonAudio.pause();
         setIsHarvestMoonAudioPlaying(false);
       } else {
-        ranAudio.pause();
-        albionAudio.pause();
-        harvestMoonAudio.play().catch((err) => {
-          console.log("Audio playback failed", err);
-        });
+        ranAudio?.pause();
+        albionAudio?.pause();
+        harvestMoonAudio
+          .play()
+          .catch((err) => console.log("Playback failed", err));
         setIsHarvestMoonAudioPlaying(true);
       }
     }
   };
-
-  useEffect(() => {
-    // Only run this in the browser
-    if (typeof window !== "undefined") {
-      const audioInstance = new Audio("/music/ran.mp3");
-      audioInstance.volume = 0.2; // Set volume
-      audioInstance.loop = true; // Enable looping
-      setRanAudio(audioInstance);
-    }
-  }, []);
 
   const handlePlayRanAudioPauseClick = () => {
     if (ranAudio) {
@@ -56,25 +56,13 @@ export const ContextApiProvider = ({ children }) => {
         ranAudio.pause();
         setIsRanAudioPlaying(false);
       } else {
-        harvestMoonAudio.pause();
-        albionAudio.pause();
-        ranAudio.play().catch((err) => {
-          console.log("Audio playback failed", err);
-        });
+        harvestMoonAudio?.pause();
+        albionAudio?.pause();
+        ranAudio.play().catch((err) => console.log("Playback failed", err));
         setIsRanAudioPlaying(true);
       }
     }
   };
-
-  useEffect(() => {
-    // Only run this in the browser
-    if (typeof window !== "undefined") {
-      const audioInstance = new Audio("/music/albion.mp3");
-      audioInstance.volume = 0.2; // Set volume
-      audioInstance.loop = true; // Enable looping
-      setAlbionAudio(audioInstance);
-    }
-  }, []);
 
   const handlePlayAlbionAudioPauseClick = () => {
     if (albionAudio) {
@@ -82,11 +70,9 @@ export const ContextApiProvider = ({ children }) => {
         albionAudio.pause();
         setIsAlbionAudioPlaying(false);
       } else {
-        harvestMoonAudio.pause();
-        ranAudio.pause();
-        albionAudio.play().catch((err) => {
-          console.log("Audio playback failed", err);
-        });
+        harvestMoonAudio?.pause();
+        ranAudio?.pause();
+        albionAudio.play().catch((err) => console.log("Playback failed", err));
         setIsAlbionAudioPlaying(true);
       }
     }
