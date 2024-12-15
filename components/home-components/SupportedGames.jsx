@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 const SupportedGames = () => {
@@ -21,10 +22,27 @@ const SupportedGames = () => {
               <h2 className=" text-sizeTitle   tracking-[.2em]">Games</h2>
             </pre>
           </div>
-          <div className=" flex justify-center items-center flex-wrap w-full ">
-            {/* Card */}
-            <div className=" w-64 h-64  flex justify-center items-center bg-[url('/images/ran.png')] bg-cover bg-no-repeat"></div>
-            <div className=" w-64 h-64  flex justify-center items-center bg-[url('/images/albion.png')] bg-cover bg-no-repeat"></div>
+          <div className="flex justify-center items-center flex-wrap w-full">
+            <Link href={"https://www.facebook.com/groups/954073679578964"}>
+              {/* Ran Card */}
+              <div className="relative group w-64 h-64 flex justify-center items-center bg-[url('/images/ran.png')] bg-cover bg-no-repeat">
+                {/* Tooltip */}
+                <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 bg-gray-800 text-white text-sm px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity">
+                  Ran Online Pinas
+                </div>
+              </div>
+            </Link>
+
+            <Link href={"https://www.facebook.com/groups/954073679578964"}>
+              {" "}
+              {/* Albion Card */}
+              <div className="relative group w-64 h-64 flex justify-center items-center bg-[url('/images/albion.png')] bg-cover bg-no-repeat">
+                {/* Tooltip */}
+                <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 bg-gray-800 text-white text-sm px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity">
+                  Albion Online Buy & Sell
+                </div>
+              </div>
+            </Link>
           </div>
         </div>
       </div>

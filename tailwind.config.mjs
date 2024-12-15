@@ -57,7 +57,7 @@ export default {
       },
 
       fontSize: {
-        sizeHero: "calc(.85rem + 3vw)",
+        sizeHero: "calc(.35rem + 3vw)",
         sizeTitle: "calc(.85rem + 2vw)",
         sizeSubtitle: "calc(.45rem + 1vw)",
         sizeCarousel: "calc(.85rem + 2vw)",

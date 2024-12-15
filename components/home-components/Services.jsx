@@ -4,7 +4,7 @@ import React from "react";
 const Services = () => {
   return (
     <div className=" rounded-full flex justify-center items-center bg-color-slideshow-background @@@@ media-350:mx-8 media-996:mx-20 media-1096:mx-24 media-1276:mx-32">
-      <div className=" wrapper text-color-golden-rod/70 font-extrabold text-sizeCarousel font-jersey tracking-[.2em]">
+      <div className=" wrapper flex justify-center items-center text-color-golden-rod/70 font-extrabold text-sizeCarousel font-jersey tracking-[.2em] text-center">
         <div className="item item1 flex items-center justify-center">
           <Image
             className="w-20 h-20 media-676:w-24 media-676:h-24 animate-[bounce_2s_ease-in-out_infinite]"
@@ -14,12 +14,13 @@ const Services = () => {
             alt=""
           />
         </div>
+
         <div className="item item2 flex justify-center items-center">
           <h3 className="shadow-bottom-dark-light p-3 rounded-xl">MIDDLEMAN</h3>
         </div>
         <div className="item item3 flex items-center justify-center">
           <Image
-            className="w-20 h-20 media-676:w-24 media-676:h-24 animate-[bounce_3s_ease-in-out_infinite]"
+            className="w-20 h-20 media-676:w-24 media-676:h-24 animate-[bounce_2s_ease-in-out_infinite]"
             src={"/images/gold.png"}
             width={100}
             height={100}

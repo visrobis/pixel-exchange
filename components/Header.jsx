@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import Contacts from "./Contacts";
 
 const Header = () => {
   return (
@@ -16,8 +17,11 @@ const Header = () => {
           />
           <Image src={"/images/logo.png"} width={100} height={100} alt="" />
         </div>
-        <div>
-          <Link href={"/"}>Testimonials</Link>
+        <div className="relative">
+          <Link href={"https://www.facebook.com/groups/954073679578964"}>
+            Transaction
+          </Link>
+          <Contacts />
         </div>
       </nav>
     </div>
