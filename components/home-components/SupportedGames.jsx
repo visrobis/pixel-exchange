@@ -1,15 +1,16 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import { About } from "./About";
 
 const SupportedGames = () => {
   return (
     <div
-      className=" shadow-top-dark fire-background relative rounded-3xl flex justify-center items-center h-screen mx-5 
+      className=" shadow-top-dark fire-background relative rounded-3xl flex justify-center items-center  mx-5 
   media-350:mx-8 media-996:mx-20 media-1096:mx-24 media-1276:mx-32"
     >
       {/* Flipped Background Image */}
-      <div className="absolute inset-0 bg-[url('/images/fire.gif')] bg-cover bg-no-repeat bg-center transform scale-y-[-1] rounded-3xl"></div>
+      <div className="absolute inset-0 bg-[url('/images/fire.gif')] bg-cover bg-no-repeat bg-center  transform scale-y-[-1] rounded-3xl"></div>
 
       {/* Gradient Overlay and Content */}
       <div className="relative shadow-bottom-dark rounded-3xl flex justify-center items-center bg-gradient-to-b from-[rgba(152,41,163,0.8)] via-[rgba(61,18,65,0.8)] to- h-full w-full">
@@ -44,6 +45,7 @@ const SupportedGames = () => {
               </div>
             </Link>
           </div>
+          <About />
         </div>
       </div>
     </div>

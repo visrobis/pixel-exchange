@@ -15,7 +15,7 @@ const Footer = () => {
           <div>
             <Link
               className="flex justify-center items-center space-x-2 p-2 rounded-xl bg-color-400 shadow-bottom-dark"
-              href={"https://discord.gg/tZ379swSJB"}
+              href={"https://www.facebook.com/killmix8623/"}
             >
               <Image
                 src={"/images/facebook.png"}
