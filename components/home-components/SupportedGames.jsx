@@ -8,6 +8,9 @@ const SupportedGames = () => {
     handlePlaySoundRanOnlinePinas,
     playMusicRanOnlinePinas,
     setPlayRanOnlinePinas,
+    handlePlaySoundAlbionOnline,
+    playMusicAlbionOnline,
+    setPlayAlbionOnline,
   } = useContext(ContextApi);
   return (
     <div
@@ -41,8 +44,8 @@ const SupportedGames = () => {
                 </div>
               </div>
             </button>
-
-            <button>
+            {handlePlaySoundAlbionOnline()}
+            <button onClick={() => setPlayAlbionOnline(!playMusicAlbionOnline)}>
               {" "}
               {/* Albion Card */}
               <div className="relative group w-40 h-40 flex justify-center items-center bg-[url('/images/albion.png')] bg-cover bg-no-repeat @@@@ media-676:w-64 media-676:h-64">

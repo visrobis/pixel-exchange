@@ -12,6 +12,11 @@ export const ContextApiProvider = ({ children }) => {
   const [playMusicRanOnlinePinas, setPlayRanOnlinePinas] = useState(false);
   const [audioRanOnlinePinas, setAudioRanOnlinePinas] = useState(null);
 
+  // AlbionOnline OST
+  const [playMusicAlbionOnline, setPlayAlbionOnline] = useState(false);
+  const [audioAlbionOnline, setAudioAlbionOnline] = useState(null);
+
+  // Handle HarvestMoon
   const handlePlaySoundHarvestMoon = () => {
     if (audioHarvestMoon) {
       // Ensure the audio object is not null
@@ -26,6 +31,8 @@ export const ContextApiProvider = ({ children }) => {
       }
     }
   };
+
+  // Handle RanOnl
   const handlePlaySoundRanOnlinePinas = () => {
     if (audioRanOnlinePinas) {
       // Ensure the audio object is not null
@@ -38,6 +45,19 @@ export const ContextApiProvider = ({ children }) => {
     }
   };
 
+  // Handle RanOnl
+  const handlePlaySoundAlbionOnline = () => {
+    if (audioAlbionOnline) {
+      // Ensure the audio object is not null
+      if (!playMusicAlbionOnline) {
+        audioAlbionOnline.pause();
+        audioAlbionOnline.volume = 0.1;
+      } else {
+        audioAlbionOnline.play();
+      }
+    }
+  };
+
   useEffect(() => {
     const audioInstanceHarvestMoon = new Audio("/music/harvestmoon.mp3");
     setAudioHarvestMoon(audioInstanceHarvestMoon);
@@ -45,14 +65,20 @@ export const ContextApiProvider = ({ children }) => {
     const audioInstanceRanOnlinePinas = new Audio("/music/ran.mp3");
     setAudioRanOnlinePinas(audioInstanceRanOnlinePinas);
 
+    const audioInstanceAlbionOnline = new Audio("/music/albion.mp3");
+    setAudioAlbionOnline(audioInstanceAlbionOnline);
+
     // only run once on the first render on the client
     return () => {
       audioInstanceHarvestMoon.pause();
       setAudioHarvestMoon(null);
       audioInstanceRanOnlinePinas.pause();
       setAudioRanOnlinePinas(null);
+      audioInstanceAlbionOnline.pause();
+      setAudioAlbionOnline(null);
     };
   }, []);
+
   return (
     <ContextApi.Provider
       value={{
@@ -64,6 +90,10 @@ export const ContextApiProvider = ({ children }) => {
         setPlayRanOnlinePinas,
         handlePlaySoundRanOnlinePinas,
         playMusicRanOnlinePinas,
+        setAudioAlbionOnline,
+        setPlayAlbionOnline,
+        handlePlaySoundAlbionOnline,
+        playMusicAlbionOnline,
       }}
     >
       {children}
