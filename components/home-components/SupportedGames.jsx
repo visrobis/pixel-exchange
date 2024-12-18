@@ -1,19 +1,8 @@
 "use client";
-import Link from "next/link";
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext } from "react";
 import { About } from "./About";
-import { ContextApi } from "@/context/contextapi";
 
 const SupportedGames = () => {
-  const {
-    handlePlayAlbionAudioPauseClick,
-    handlePlayRanAudioPauseClick,
-    handlePlayHarvestMoonAudioPauseClick,
-    isAlbionAudioPlaying,
-    isRanAudioPlaying,
-    isHarvestMoonAudioPlaying,
-  } = useContext(ContextApi);
-
   return (
     <div
       className=" shadow-top-dark fire-background relative rounded-3xl flex justify-center items-center  mx-5 
@@ -34,7 +23,7 @@ const SupportedGames = () => {
             </pre>
           </div>
           <div className="flex justify-center items-center flex-wrap w-full">
-            <button onClick={handlePlayRanAudioPauseClick}>
+            <button>
               {/* Ran Card */}
               <div className="relative group w-40 h-40 flex justify-center items-center bg-[url('/images/ran.png')] bg-cover bg-no-repeat @@@@ media-676:w-64 media-676:h-64">
                 {/* Tooltip */}
@@ -44,7 +33,7 @@ const SupportedGames = () => {
               </div>
             </button>
 
-            <button onClick={handlePlayAlbionAudioPauseClick}>
+            <button>
               {" "}
               {/* Albion Card */}
               <div className="relative group w-40 h-40 flex justify-center items-center bg-[url('/images/albion.png')] bg-cover bg-no-repeat @@@@ media-676:w-64 media-676:h-64">
@@ -57,19 +46,6 @@ const SupportedGames = () => {
           </div>
           <About />
         </div>
-      </div>
-      <div className=" hidden">
-        <button onClick={handlePlayHarvestMoonAudioPauseClick}>
-          {isHarvestMoonAudioPlaying
-            ? "Pause Harvest Moon"
-            : "Play Harvest Moon"}
-        </button>
-        <button onClick={handlePlayRanAudioPauseClick}>
-          {isRanAudioPlaying ? "Pause Ran" : "Play Ran"}
-        </button>
-        <button onClick={handlePlayAlbionAudioPauseClick}>
-          {isAlbionAudioPlaying ? "Pause Albion" : "Play Albion"}
-        </button>
       </div>
     </div>
   );

@@ -6,7 +6,7 @@ import Contacts from "./Contacts";
 import { ContextApi } from "@/context/contextapi";
 
 const Header = () => {
-  const { handlePlayHarvestMoonAudioPauseClick, isHarvestMoonAudioPlaying } =
+  const { audio, setAudio, playSound, playMusic, setPlayMusic } =
     useContext(ContextApi);
 
   return (
@@ -14,16 +14,18 @@ const Header = () => {
       <nav className="px-1 shadow-bottom-light flex justify-around items-center mt-10 fixed w-8/12 h-16 rounded-3xl bg-color-nav text-color-100">
         <div className="flex justify-center items-center gap-1 relative">
           <div className="group relative">
-            <Image
-              onClick={handlePlayHarvestMoonAudioPauseClick}
-              className="rounded-xl cursor-pointer"
-              src={"/images/alien.gif"}
-              width={50}
-              height={50}
-              alt={isHarvestMoonAudioPlaying ? "Pause Music" : "Play Music"}
-            />
+            {playSound()}
+            <button onClick={() => setPlayMusic(!playMusic)}>
+              <Image
+                className="rounded-xl cursor-pointer"
+                src={"/images/alien.gif"}
+                width={50}
+                height={50}
+                alt={""}
+              />
+            </button>
             <span className="absolute top-full left-1/2 transform -translate-x-1/2 mt-2 hidden group-hover:block bg-gray-700 text-white text-sm px-2 py-1 rounded">
-              {isHarvestMoonAudioPlaying ? "Pause Music" : "Play Music"}
+              {playMusic ? "Pause Music" : "Play Music"}
             </span>
           </div>
           <Image src={"/images/logo.png"} width={100} height={100} alt="" />
