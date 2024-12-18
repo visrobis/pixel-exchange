@@ -4,37 +4,66 @@ const { createContext, useState, useEffect } = require("react");
 export const ContextApi = createContext();
 
 export const ContextApiProvider = ({ children }) => {
-  const [playMusic, setPlayMusic] = useState(false);
-  const [audio, setAudio] = useState(null);
+  // // HarvestMoon OST
+  const [playMusicHarvestMoon, setPlayMusicHarvestMoon] = useState(false);
+  const [audioHarvestMoon, setAudioHarvestMoon] = useState(null);
 
-  const playSound = () => {
-    if (audio) {
+  // RanOnLinePinas OST
+  const [playMusicRanOnlinePinas, setPlayRanOnlinePinas] = useState(false);
+  const [audioRanOnlinePinas, setAudioRanOnlinePinas] = useState(null);
+
+  const handlePlaySoundHarvestMoon = () => {
+    if (audioHarvestMoon) {
       // Ensure the audio object is not null
-      if (!playMusic) {
-        audio.pause();
-        audio.volume = 0.1;
+      if (!playMusicHarvestMoon) {
+        audioHarvestMoon.pause();
+        audioHarvestMoon.volume = 0.1;
       } else {
-        audio.play();
+        audioHarvestMoon.play();
+        if (audioHarvestMoon.play()) {
+          audioRanOnlinePinas.pause();
+        }
       }
     }
   };
+  const handlePlaySoundRanOnlinePinas = () => {
+    if (audioRanOnlinePinas) {
+      // Ensure the audio object is not null
+      if (!playMusicRanOnlinePinas) {
+        audioRanOnlinePinas.pause();
+        audioRanOnlinePinas.volume = 0.1;
+      } else {
+        audioRanOnlinePinas.play();
+      }
+    }
+  };
+
   useEffect(() => {
-    const audioInstance = new Audio("/music/harvestmoon.mp3");
-    setAudio(audioInstance);
+    const audioInstanceHarvestMoon = new Audio("/music/harvestmoon.mp3");
+    setAudioHarvestMoon(audioInstanceHarvestMoon);
+
+    const audioInstanceRanOnlinePinas = new Audio("/music/ran.mp3");
+    setAudioRanOnlinePinas(audioInstanceRanOnlinePinas);
+
     // only run once on the first render on the client
     return () => {
-      audioInstance.pause();
-      setAudio(null); // Reset the audio state when component unmounts
+      audioInstanceHarvestMoon.pause();
+      setAudioHarvestMoon(null);
+      audioInstanceRanOnlinePinas.pause();
+      setAudioRanOnlinePinas(null);
     };
   }, []);
   return (
     <ContextApi.Provider
       value={{
-        audio,
-        setAudio,
-        playSound,
-        playMusic,
-        setPlayMusic,
+        setAudioHarvestMoon,
+        setPlayMusicHarvestMoon,
+        handlePlaySoundHarvestMoon,
+        playMusicHarvestMoon,
+        setAudioRanOnlinePinas,
+        setPlayRanOnlinePinas,
+        handlePlaySoundRanOnlinePinas,
+        playMusicRanOnlinePinas,
       }}
     >
       {children}
