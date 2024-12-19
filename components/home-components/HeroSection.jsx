@@ -18,8 +18,8 @@ const HeroSection = () => {
               />
             </div>
             <div className="flex justify-center flex-col items-center text-color-100 @@@@  @@@@ media-676:space-y-5">
-              <div className="flex justify-center w-64 p-3 @@@@ media-776:w-auto media-676:px-0">
-                <div className="flex justify-center items-center gap-2 flex-col ">
+              <div className="flex justify-center items-start w-64 p-3 @@@@ media-776:w-auto media-676:px-0">
+                <div className="flex justify-center items-start gap-2 flex-col ">
                   <h1 className="text-sizeHero  font-extrabold font-pixel tracking-[.2em] w-fit ">
                     Pixel
                   </h1>
