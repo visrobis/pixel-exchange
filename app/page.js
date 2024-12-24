@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import HeroSection from "@/components/home-components/HeroSection";
 import Services from "@/components/home-components/Services";
 import SupportedGames from "@/components/home-components/SupportedGames";
-import Announcement from "@/components/Announcement";
+// import Announcement from "@/components/Announcement";
 
 export default function Home() {
   // Initial state ensures a valid starting gradient
@@ -32,7 +32,7 @@ export default function Home() {
     <div
       className={`bg-gradient-to-r py-5 ${bgColor} transition-all duration-1000 ease-in-out min-h-screen`}
     >
-      <Announcement />
+      {/* <Announcement /> */}
       <HeroSection />
       <Services />
       <SupportedGames />

@@ -40,7 +40,7 @@ const SupportedGames = () => {
               <div className="relative group w-40 h-40 flex justify-center items-center bg-[url('/images/ran.png')] bg-cover bg-no-repeat @@@@ media-676:w-64 media-676:h-64">
                 {/* Tooltip */}
                 <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 bg-gray-800 text-white text-sm px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity">
-                  {playMusicRanOnlinePinas ? "Play" : "Pause"}
+                  {playMusicRanOnlinePinas ? "Pause Music" : "Play Music"}
                 </div>
               </div>
             </button>
@@ -51,7 +51,7 @@ const SupportedGames = () => {
               <div className="relative group w-40 h-40 flex justify-center items-center bg-[url('/images/albion.png')] bg-cover bg-no-repeat @@@@ media-676:w-64 media-676:h-64">
                 {/* Tooltip */}
                 <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 bg-gray-800 text-white text-sm px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity">
-                  Play Music
+                  {playMusicRanOnlinePinas ? "Pause Music" : "Play Music"}
                 </div>
               </div>
             </button>
